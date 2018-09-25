@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="JPustTest developed by StudyZ"/>
+
+        <Button
+            android:id="@+id/link_state_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="链接状态"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/device_management_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设备管理:"/>
+            <Spinner
+                android:id="@+id/device_management_command_s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/device_management"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/notification_management_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="通知管理:"/>
+            <Spinner
+                android:id="@+id/notification_management_command_s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/nitification_management"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <Button
+                android:id="@+id/test_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试:"/>
+
+            <EditText
+                android:id="@+id/test_e"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/log_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Log:\n"
+            />
+
+    </LinearLayout>
+
+</ScrollView>

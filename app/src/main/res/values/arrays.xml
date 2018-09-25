@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="device_management">
+        <item>注册ID</item>
+        <item>设备别名</item>
+        <item>查询别名</item>
+        <item>设置标签</item>
+        <item>查询标签</item>
+        <item>标签绑定状态</item>
+    </string-array>
+
+    <string-array name="nitification_management">
+        <item>本地通知</item>
+        <item>清除本地通知</item>
+        <item>清除所有通知</item>
+
+    </string-array>
+</resources>

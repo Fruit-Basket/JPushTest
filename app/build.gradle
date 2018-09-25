@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.example.jiguang.jpusttest"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs{
+        release{
+            storeFile file("D:\\Projects\\AndroidProjects\\Android_apk_签名.jks")//签名文件的 path
+            storePassword "123456"
+            keyAlias "签名"
+            keyPassword "123456"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfigs.release
+        }
+        debug{
+            minifyEnabled false
+            signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //集成极光推送
+    implementation files('libs/jpush-android-3.1.5.jar')
+    implementation files('libs/jcore-android-1.2.3.jar')
+    //集成华为推送所需用到的A文件
+    compile(name: 'HMSSdk-agent', ext: 'aar')
+    implementation files('libs/HMS_SDK_2.6.0.301.jar')
+    implementation files('libs/jpush-android-plugin-huawei-v3.1.5.jar')
+    implementation 'com.android.support:support-v4:27.1.1'
+    //集成小米推送所需用到的JAR文件
+    implementation files('libs/MiPush_SDK_Client_3_6_9.jar')
+    implementation files('libs/jpush-android-plugin-xiaomi-v3.1.5.jar')
+    //集成FCM所需用到的依赖项
+    compile 'com.google.firebase:firebase-messaging:11.8.0'
+    implementation files('libs/jpush-android-plugin-fcm-v3.1.5.jar')
+    //集成魅族推送所需
+    implementation files('libs/jpush-android-plugin-meizu-v3.1.5.jar')
+}
+
+repositories{
+    flatDir{
+        dirs'libs'//this way we can find the .aar file in libs folder
+    }
+}
+
+//使用FCM所需要用到的Google插件
+apply plugin: 'com.google.gms.google-services'
