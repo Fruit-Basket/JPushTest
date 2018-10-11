@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "928776768365",
+    "firebase_url": "https://jpushtest-123456.firebaseio.com",
+    "project_id": "jpushtest-123456",
+    "storage_bucket": "jpushtest-123456.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928776768365:android:5460bfb0bf90c3aa",
+        "android_client_info": {
+          "package_name": "com.example.jiguang.jpusttest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "928776768365-kc4ds5mgbm8hqtb74t3snjij53803ge4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBll50SA-qasxa_nhHFOhnjf6x5A3hrAOE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
